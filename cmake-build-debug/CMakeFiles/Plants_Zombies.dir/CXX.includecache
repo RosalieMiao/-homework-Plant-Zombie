@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/Code/Plants&Zombies/bullet.h
+object.h
+D:/Code/Plants&Zombies/object.h
+
+D:/Code/Plants&Zombies/game.cpp
+game.h
+D:/Code/Plants&Zombies/game.h
+iostream
+-
+assert.h
+-
+conio.h
+-
+windows.h
+-
+cstdlib
+-
+time.h
+-
+
+D:/Code/Plants&Zombies/game.h
+vector
+-
+zombie.h
+D:/Code/Plants&Zombies/zombie.h
+plant.h
+D:/Code/Plants&Zombies/plant.h
+
+D:/Code/Plants&Zombies/object.h
+
+D:/Code/Plants&Zombies/plant.h
+bullet.h
+D:/Code/Plants&Zombies/bullet.h
+
+D:/Code/Plants&Zombies/zombie.h
+object.h
+D:/Code/Plants&Zombies/object.h
+
