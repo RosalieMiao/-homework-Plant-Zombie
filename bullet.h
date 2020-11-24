@@ -4,19 +4,23 @@
 
 #ifndef PLANTS_ZOMBIES_BULLET_H
 #define PLANTS_ZOMBIES_BULLET_H
-#define bullet_speed 0.5
-#define bullet_attack 1
 #include "object.h"
+
 class Bullet : public Object {
     const int attack;
+ protected:
+    Bullet_type bullet_type;
  public:
-    Bullet(double x, double y): attack(bullet_attack) {
-        speed = bullet_speed;
-        objects_type = BULLET;
-        cor_x = x;
-        cor_y = y;
-    }
+    ~Bullet() override {delete name; name = nullptr;}
+    Bullet(double x, double y);
     int get_attack() const ;
+    Bullet_type get_bullet_type() const;
+    int get_blood() const override;
+};
+
+class IceBullet : public Bullet {
+ public:
+    IceBullet(double x, double y);
 };
 
 #endif //PLANTS_ZOMBIES_BULLET_H

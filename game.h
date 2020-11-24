@@ -4,13 +4,7 @@
 
 #ifndef PLANTS_ZOMBIES_GAME_H
 #define PLANTS_ZOMBIES_GAME_H
-//#include <map>
-#include <vector>
-#include "zombie.h"
 #include "plant.h"
-#define board_width 8
-#define board_height 3
-using namespace std;
 
 class Game {
     vector <pair <Object*, bool>> object_list;
@@ -20,20 +14,35 @@ class Game {
     int cursor_x;
     int cursor_y;
     int store_cursor;
-    double zombie_cd;
-    double zombie_cd_piece;
+    bool root_out;
+
+    int zombie_cd;
+    int test_zombie_cd;
+    int zombie_step;
+    int zombie_time_count;
+
+    vector <pair<Plant*, clock_t>> store_objects;
 
     void init_board();
     void update_board();
-    bool encounter(Object* obj, Object_type t);
-    int find_obj(int x, int y, Object_type t);
-    Object* find(int x, int y, Object_type t);
+    vector <int> find_obj(int x, int y, Object_type t);
     bool update_zombie_cd();
-    bool can_be_planted(int x, int y);
+    bool can_be_planted();
+    bool exist_zombie(int x);
+    bool exist_plant(int x, int y);
+    int get_printed(int x, int y);
+    void box_boom(BoxZom* boxZom);
+    void throw_stone(CatapultZombie* catapultZombie);
+    void set_text_color(int color);
+    void update_zombie_step();
+    void generate_zombie();
+    bool update_test_zombie_cd();
+    void test_generate_zombie();
+
+    void drawInterface(clock_t now);
  public:
     Game();
     void playing();
-    void drawInterface();
 };
 
 #endif //PLANTS_ZOMBIES_GAME_H

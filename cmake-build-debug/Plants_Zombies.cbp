@@ -95,6 +95,9 @@
 		<Unit filename="D:/Code/Plants&amp;Zombies/main.cpp">
 			<Option target="Plants_Zombies"/>
 		</Unit>
+		<Unit filename="D:/Code/Plants&amp;Zombies/myhead.h">
+			<Option target="Plants_Zombies"/>
+		</Unit>
 		<Unit filename="D:/Code/Plants&amp;Zombies/object.cpp">
 			<Option target="Plants_Zombies"/>
 		</Unit>
